@@ -1,0 +1,30 @@
+.features-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-title {
+        @include titleStyle;
+        margin-top: 96px;
+        p {
+            width: 21vw;
+        }
+    }
+    &-info {
+        @include flex-row;
+        &__img {
+            align-items: center;
+        }
+        &__descr {
+            @include flex-column;
+            justify-content: space-evenly;
+            color: $white;
+            .about-info h3 {
+                align-items: center;
+            }
+            .about-info h3::before {
+                content: url(../img/icon-info.png);
+            }
+        }
+    }
+}

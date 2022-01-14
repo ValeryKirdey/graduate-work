@@ -1,0 +1,25 @@
+.buy-now-section {
+    @include flex-column;
+    justify-content: center;
+    align-items: center;
+    &-text {
+        margin-top: 100px;
+        @include titleStyle;
+    }
+    &-btn {
+        button {
+            @include btn;
+            padding: 18px 31px;
+            background-color: $white;
+            margin: 90px 20px 100px 0;
+        }
+        button:hover {
+            @include btn;
+            color: $white;
+            padding: 18px 31px;
+            background-color: $background;
+            border: 1px solid $white;
+            margin: 90px 20px 100px 0;
+        }
+    }
+}
