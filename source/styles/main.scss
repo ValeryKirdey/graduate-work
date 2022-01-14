@@ -1,0 +1,12 @@
+@import "./fonts.scss";
+@import "./mixin.scss";
+@import "./navbar.scss";
+@import "./consttants.scss";
+@import "./home-section.scss";
+body {
+    .container {
+        min-width: 1440px;
+    }
+    margin: 0px auto;
+    background: #252B42;
+}
