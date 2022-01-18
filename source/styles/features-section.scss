@@ -17,13 +17,20 @@
         }
         &__descr {
             @include flex-column;
-            justify-content: space-evenly;
+            justify-content: center;
             color: $white;
-            .about-info h3 {
-                align-items: center;
-            }
-            .about-info h3::before {
-                content: url(../img/icon-info.png);
+            .about-info {
+                &__img {
+                    margin-top: 90px;
+                    @include flex-row;
+                    align-items: center;
+                    h3 {
+                        margin: auto 0;
+                    }
+                    img {
+                        margin-right: 10px;
+                    }
+                }
             }
         }
     }

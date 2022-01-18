@@ -1,14 +1,14 @@
 @import "./fonts.scss";
+@import "./consttants.scss";
 @import "./mixin.scss";
 @import "./navbar.scss";
-@import "./consttants.scss";
 @import "./home-section.scss";
 @import "./features-section.scss";
 @import "./buy-now.scss";
 body {
+    background: #252B42;
+    margin: 0px auto;
     .container {
         min-width: 1440px;
     }
-    margin: 0px auto;
-    background: #252B42;
 }
