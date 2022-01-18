@@ -1,0 +1,23 @@
+.partners {
+    .container {
+        @include flex-column;
+        @include titleStyle;
+        justify-content: center;
+        align-items: center;
+        p {
+            width: 22%;
+        }
+    }
+    &__icons {
+        @include flex-row;
+        margin: 100px 0px;
+        img {
+            padding-left: 67px;
+        }
+    }
+    button {
+        @include btn;
+        padding: 16px 58px;
+        margin-bottom: 80px;
+    }
+}

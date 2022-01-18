@@ -10,14 +10,16 @@
         button {
             @include btn;
             padding: 18px 31px;
-            background-color: $white;
+            background-color: $white !important;
+            color: $btn !important;
             margin: 90px 20px 100px 0;
+            border: 1px solid $white;
         }
         button:hover {
             @include btn;
-            color: $white;
+            color: $white !important;
             padding: 18px 31px;
-            background-color: $background;
+            background-color: $background !important;
             border: 1px solid $white;
             margin: 90px 20px 100px 0;
         }

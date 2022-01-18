@@ -1,0 +1,37 @@
+.newsletter {
+    .container {
+        margin: 216px 0 109px;
+        @include flex-row;
+    }
+    &-block {
+        @include flex-row;
+        align-items: center;
+        justify-content: space-between;
+        &__info {
+            margin-left: 180px; //fix this moment 
+        }
+        &__descr {
+            @include titleStyle;
+            @include flex-column;
+            align-items: start;
+            &__btn {
+                @include flex-row;
+                align-items: center;
+                input {
+                    @include email;
+                    margin-top: 34px;
+                }
+                input:focus {
+                    outline: 0;
+                }
+                button {
+                    margin: 34px 0 0 12px;
+                    color: $btn;
+                    border: none;
+                    padding: 19px 38px;
+                    @include btn;
+                }
+            }
+        }
+    }
+}

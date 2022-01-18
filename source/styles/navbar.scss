@@ -15,24 +15,25 @@
         @include flex-row;
         align-items: center;
         input {
-            color: #18171D;
-            font-size: 14px;
-            line-height: 16px;
-            background: $white;
-            border: 1px solid #E8E8E8;
-            border-radius: 39px;
+            @include email;
             margin: 0px 12px;
-            padding: 19px 166px 19px 39px;
+            &:focus {
+                outline: 0;
+            }
+            &::placeholder {
+                font-family: $primeryFontRegular;
+                color: #18171D;
+                font-size: 14px;
+                line-height: 16px;
+            }
         }
         button {
-            color: $btn;
-            font-size: 16px;
-            line-height: 16px;
             margin: 0px 10px;
-            background: $white;
+            background: $white !important;
+            color: $btn !important;
             border: none;
-            border-radius: 35px;
             padding: 19px 38px;
+            @include btn;
         }
     }
 }
