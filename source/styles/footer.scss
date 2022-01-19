@@ -1,0 +1,63 @@
+.more {
+    .container {
+        @include flex-row;
+        justify-content: space-between;
+    }
+    &__pages {
+        ul {
+            font-size: 15px;
+            line-height: 27px;
+            letter-spacing: 0.2px;
+            color: $white;
+            text-decoration: none;
+            list-style-type: none;
+            li span {
+                font-size: 22px;
+                line-height: 33px;
+                letter-spacing: 0.1px;
+            }
+        }
+    }
+    &__subscribe {
+        @include flex-column;
+        justify-content: start;
+        text-align: left;
+        color: $white;
+        &-img {
+            @include flex-row;
+            justify-content: start;
+            text-align: left;
+            img {
+                margin: 0 32px 32px 0;
+            }
+        }
+        span {
+            font-size: 22px;
+            line-height: 33px;
+            letter-spacing: 0.1px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 27px;
+            letter-spacing: 0.2px;
+            margin: 0;
+        }
+        input {
+            @include email;
+            padding: 19px 250px 19px 35px;
+            margin: 29px 0 12px 0;
+            &:focus {
+                outline: 0;
+            }
+            &::placeholder {
+                font-size: 14px;
+                line-height: 16px;
+            }
+        }
+        button {
+            @include btn;
+            padding: 17px 144px;
+            margin-bottom: 130px;
+        }
+    }
+}
