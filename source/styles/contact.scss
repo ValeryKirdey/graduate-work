@@ -1,0 +1,81 @@
+.contact {
+    .container {
+        @include titleStyle;
+    }
+    &__icons {
+        @include flex-row;
+        justify-content: center;
+        align-items: center;
+        img {
+            margin: 75px 16px;
+        }
+    }
+    &__map {
+        @include flex-row;
+        justify-content: center;
+        iframe {
+            width: 100%;
+            border: 0;
+        }
+    }
+    &__logo {
+        @include flex-row;
+        justify-content: center;
+        align-items: center;
+        img {
+            margin: 65px 75px 106px;
+        }
+    }
+    &__form {
+        @include flex-column;
+        font-family: $primeryFontRegular;
+        background: $white;
+        border: 1px solid #DDDDDD;
+        box-sizing: border-box;
+        box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+        border-radius: 20px;
+        padding: 52px 50px;
+        margin-bottom: 100px;
+        p {
+            color: $black;
+            font-size: 22px;
+            line-height: 33px;
+            letter-spacing: 0.1px;
+        }
+        input {
+            @include email;
+            margin-top: 45px;
+            &:focus {
+                outline: 0;
+            }
+            &::placeholder {
+                font-size: 14px;
+                line-height: 16px;
+            }
+        }
+        textarea {
+            background: #F5F5F5; //placeholder hidden
+            border: 1px solid #E8E8E8;
+            color: $black;
+            box-sizing: border-box;
+            margin: 45px 0;
+            padding: 19px 0 19px 39px;
+            &:focus {
+                outline: 0;
+            }
+            &::placeholder {
+                font-size: 15px;
+                line-height: 16px;
+                letter-spacing: 0.1px;
+                outline: 0;
+            }
+        }
+        button {
+            @include btn;
+            width: 145px;
+            height: 52px;
+            padding: 18px 54px;
+            align-items: center;
+        }
+    }
+}
