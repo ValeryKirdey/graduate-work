@@ -1,0 +1,38 @@
+.testimonials {
+    .container {
+        text-align: center;
+        h2 {
+            @include titleStyle;
+        }
+        button {
+            @include btn;
+            padding: 16px 47px;
+            margin-bottom: 100px;
+        }
+    }
+    &-cards {
+        @include flex-row;
+        flex-wrap: wrap;
+        .testimonials-card {
+            @include flex-column;
+            width: 29%;
+            padding: 40px 42px 50px;
+            align-items: center;
+            background: $white;
+            border: 1px solid #DEDEDE;
+            box-sizing: border-box;
+            box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+            border-radius: 10px;
+            margin: 90px 30px;
+            p {
+                width: 52%;
+                margin: 40px 0;
+                font-size: 15px;
+                line-height: 27px;
+            }
+            span {
+                margin: 30px 0 10px;
+            }
+        }
+    }
+}
