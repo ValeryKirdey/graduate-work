@@ -1,6 +1,14 @@
 .navbar {
     position: absolute;
-    margin-top: 50px;
+    width: 100%;
+    .container {
+        @include flex-row;
+        justify-content: space-between;
+        text-align: center;
+        margin-top: 50px;
+        flex-wrap: nowrap !important;
+        width: 90%;
+    }
     &-menu {
         .nav-link {
             margin: 0 10px !important;

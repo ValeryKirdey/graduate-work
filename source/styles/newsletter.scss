@@ -1,19 +1,28 @@
 .newsletter {
     .container {
-        margin: 216px 0 109px;
+        margin: 216px auto 109px;
         @include flex-row;
     }
     &-block {
         @include flex-row;
         align-items: center;
         justify-content: space-between;
-        &__info {
-            margin-left: 180px; //fix this moment 
+        // &__info {
+        //     align-items: left;
+        // }
+        &-pic {
+            background-image: url(../img/news.svg);
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
         }
         &__descr {
             @include titleStyle;
             @include flex-column;
-            align-items: start;
+            align-items: start !important;
+            // h1 {
+            //     align-items: start !important;
+            // }
             &__btn {
                 @include flex-row;
                 align-items: center;

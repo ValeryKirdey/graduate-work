@@ -1,6 +1,8 @@
 .contact {
     .container {
         @include titleStyle;
+        justify-content: center;
+        width: 60%;
     }
     &__icons {
         @include flex-row;
@@ -13,6 +15,7 @@
     &__map {
         @include flex-row;
         justify-content: center;
+        height: 320px;
         iframe {
             width: 100%;
             border: 0;
@@ -20,10 +23,20 @@
     }
     &__logo {
         @include flex-row;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        img {
-            margin: 65px 75px 106px;
+        margin: 65px 40px 106px;
+        &-text {
+            @include flex-column;
+            align-items: center;
+            font-size: 12px;
+            line-height: 18px;
+            flex: 1;
+            p {
+                text-align: center;
+                padding-top: 20px;
+                width: 110%;
+            }
         }
     }
     &__form {
@@ -41,6 +54,7 @@
             font-size: 22px;
             line-height: 33px;
             letter-spacing: 0.1px;
+            width: 22%;
         }
         input {
             @include email;

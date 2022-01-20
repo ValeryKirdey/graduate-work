@@ -44,7 +44,7 @@
         }
         input {
             @include email;
-            padding: 19px 250px 19px 35px;
+            padding: 19px 19px 19px 35px;
             margin: 29px 0 12px 0;
             &:focus {
                 outline: 0;

@@ -15,7 +15,7 @@
         flex-wrap: wrap;
         .testimonials-card {
             @include flex-column;
-            width: 29%;
+            width: 28%;
             padding: 40px 42px 50px;
             align-items: center;
             background: $white;

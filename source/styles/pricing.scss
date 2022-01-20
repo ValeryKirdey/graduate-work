@@ -1,14 +1,15 @@
 .pricing {
     .container {
         @include flex-row;
-        justify-content: space-around; //dosen't worked
+        justify-content: space-around;
+        width: 75%;
     }
     &__title {
         @include titleStyle;
         text-align: left;
         align-items: start;
         justify-content: start;
-        width: 22%;
+        width: 30%;
         h1 {
             margin: 0 0 26px 0;
         }
