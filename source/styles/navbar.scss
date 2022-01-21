@@ -11,12 +11,18 @@
     }
     &-menu {
         .nav-link {
-            margin: 0 10px !important;
+            margin: 0 10px;
             font-family: $primeryFontRegular;
             font-size: 15px;
             line-height: 27px;
             letter-spacing: 0.2px;
             color: $white;
+            @media(max-width: $xxl) {
+                margin: 0;
+            }
+        }
+        .nav {
+            flex-wrap: nowrap;
         }
     }
     &-form {
@@ -25,6 +31,7 @@
         input {
             @include email;
             margin: 0px 12px;
+            width: 273px;
             &:focus {
                 outline: 0;
             }
@@ -33,6 +40,9 @@
                 color: #18171D;
                 font-size: 14px;
                 line-height: 16px;
+            }
+            @media(max-width: $xl) {
+                margin: 0;
             }
         }
         button {

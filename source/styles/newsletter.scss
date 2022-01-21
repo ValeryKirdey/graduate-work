@@ -1,34 +1,35 @@
 .newsletter {
     .container {
-        margin: 216px auto 109px;
         @include flex-row;
+        margin: 216px auto 109px;
     }
     &-block {
         @include flex-row;
         align-items: center;
-        justify-content: space-between;
-        // &__info {
-        //     align-items: left;
-        // }
         &-pic {
-            background-image: url(../img/news.svg);
-            background-repeat: no-repeat;
-            height: 100%;
-            width: 100%;
+            // background: url(../img/news.svg) no-repeat;
+            // ;
+            // height: 100%;
+            // width: 100%;
+            img {
+                max-width: 100%;
+                height: 100%;
+            }
         }
         &__descr {
             @include titleStyle;
             @include flex-column;
             align-items: start !important;
-            // h1 {
-            //     align-items: start !important;
-            // }
+            h2 {
+                text-align: left;
+            }
             &__btn {
                 @include flex-row;
                 align-items: center;
                 input {
                     @include email;
                     margin-top: 34px;
+                    width: 273px;
                 }
                 input:focus {
                     outline: 0;
