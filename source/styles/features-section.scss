@@ -12,6 +12,9 @@
     }
     &-info {
         @include flex-row;
+        @media(max-width: $md) {
+            @include flex-column;
+        }
         &__img {
             align-items: center;
             img {
@@ -23,8 +26,18 @@
             @include flex-column;
             justify-content: center;
             color: $white;
+            @media(max-width: $md) {
+                @include flex-column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 100px;
+            }
             p {
                 width: 60%;
+                margin-top: 15px;
+                @media(max-width: $md) {
+                    width: 36%;
+                }
             }
             .about-info {
                 &__img {

@@ -1,13 +1,11 @@
 .navbar {
     position: absolute;
-    width: 100%;
     .container {
         @include flex-row;
         justify-content: space-between;
-        text-align: center;
+        align-items: center;
         margin-top: 50px;
         flex-wrap: nowrap !important;
-        width: 90%;
     }
     &-menu {
         .nav-link {
@@ -23,6 +21,9 @@
         }
         .nav {
             flex-wrap: nowrap;
+        }
+        @media(max-width: $md) {
+            display: none;
         }
     }
     &-form {
@@ -44,14 +45,39 @@
             @media(max-width: $xl) {
                 margin: 0;
             }
+            @media(max-width: $md) {
+                display: none;
+            }
         }
-        button {
+        .sub {
             margin: 0px 10px;
             background: $white !important;
             color: $btn !important;
             border: none;
             padding: 19px 38px;
             @include btn;
+            @media(max-width: $md) {
+                display: none;
+            }
+            // @media(min-width: $md) {
+            //     display: none;
+            // }
+        }
+        .log {
+            margin: 30px 20px 0 3px;
+            background: $white !important;
+            color: $btn !important;
+            border: none;
+            padding: 19px 38px;
+            @include btn;
+            @media(min-width: $md) {
+                display: none;
+            }
+        }
+        @media(min-width: $md) {
+            img {
+                display: none;
+            }
         }
     }
 }

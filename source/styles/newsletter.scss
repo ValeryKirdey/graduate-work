@@ -2,10 +2,16 @@
     .container {
         @include flex-row;
         margin: 216px auto 109px;
+        @media(max-width: $xl) {
+            margin: 20px auto 90px;
+        }
     }
     &-block {
         @include flex-row;
-        align-items: center;
+        justify-content: space-between;
+        @media(max-width: $md) {
+            @include flex-column;
+        }
         &-pic {
             // background: url(../img/news.svg) no-repeat;
             // ;

@@ -2,6 +2,9 @@
     @include flex-column;
     justify-content: center;
     align-items: center;
+    @media(max-width: $md) {
+        background: linear-gradient(39.97deg, #00F3B9 0.79%, #2187FF 79.29%);
+    }
     &-text {
         margin-top: 100px;
         @include titleStyle;
@@ -19,7 +22,7 @@
             @include btn;
             color: $white !important;
             padding: 18px 31px;
-            background-color: $background !important;
+            background-color: transparent!important;
             border: 1px solid $white;
             margin: 90px 20px 100px 0;
         }
