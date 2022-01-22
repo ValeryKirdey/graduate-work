@@ -3,6 +3,11 @@
         @include flex-row;
         justify-content: space-around;
         width: 75%;
+        @media(max-width: $md) {
+            @include flex-column;
+            justify-content: center;
+            align-items: center;
+        }
     }
     &__title {
         @include titleStyle;
@@ -13,12 +18,28 @@
         h1 {
             margin: 0 0 26px 0;
         }
+        @media(max-width: $md) {
+            @include flex-column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 70%;
+        }
     }
     &__info {
         @include flex-column;
         @include titleStyle;
         text-align: left;
         align-items: start;
+        @media(max-width: $md) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 110px;
+            span {
+                text-align: center;
+            }
+        }
         &-dollar {
             @include flex-row;
             align-items: center;

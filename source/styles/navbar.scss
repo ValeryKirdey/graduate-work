@@ -1,8 +1,10 @@
 .navbar {
     position: absolute;
+    width: 100%;
+    margin: 0 auto;
     .container {
         @include flex-row;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         margin-top: 50px;
         flex-wrap: nowrap !important;
@@ -19,9 +21,6 @@
                 margin: 0;
             }
         }
-        .nav {
-            flex-wrap: nowrap;
-        }
         @media(max-width: $md) {
             display: none;
         }
@@ -32,7 +31,7 @@
         input {
             @include email;
             margin: 0px 12px;
-            width: 273px;
+            width: 100%;
             &:focus {
                 outline: 0;
             }
@@ -44,6 +43,7 @@
             }
             @media(max-width: $xl) {
                 margin: 0;
+                width: 25vw;
             }
             @media(max-width: $md) {
                 display: none;

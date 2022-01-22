@@ -1,9 +1,29 @@
 .more {
     .container {
+        position: relative;
         @include flex-row;
         justify-content: space-between;
+        width: 80%;
+        @media(max-width: 780px) {
+            @include flex-column;
+        }
+        @media(max-width: $md) {
+            @include flex-column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
     }
-    &__pages {
+    .pages {
+        justify-content: space-between;
+        @media(min-width: $md) {
+            display: none;
+            visibility: hidden;
+            @include flex-column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+        }
         ul {
             font-size: 15px;
             line-height: 27px;
@@ -11,10 +31,38 @@
             color: $white;
             text-decoration: none;
             list-style-type: none;
-            li span {
+            li {
+                margin: 8px 0;
+            }
+            li:first-child {
                 font-size: 22px;
                 line-height: 33px;
                 letter-spacing: 0.1px;
+                margin-bottom: 17px;
+            }
+        }
+    }
+    .footext {
+        @include flex-row;
+        justify-content: space-between;
+        @media(max-width: $md) {
+            display: none;
+        }
+        ul {
+            font-size: 15px;
+            line-height: 27px;
+            letter-spacing: 0.2px;
+            color: $white;
+            text-decoration: none;
+            list-style-type: none;
+            li {
+                margin: 8px 0;
+            }
+            li:first-child {
+                font-size: 22px;
+                line-height: 33px;
+                letter-spacing: 0.1px;
+                margin-bottom: 17px;
             }
         }
     }
@@ -23,12 +71,24 @@
         justify-content: start;
         text-align: left;
         color: $white;
+        @media(max-width: 780px) {
+            justify-content: center;
+            align-items: center;
+        }
+        @media(max-width: $md) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         &-img {
             @include flex-row;
             justify-content: start;
             text-align: left;
             img {
                 margin: 0 32px 32px 0;
+                @media(max-width: $md) {
+                    margin: 32px;
+                }
             }
         }
         span {
@@ -42,22 +102,26 @@
             letter-spacing: 0.2px;
             margin: 0;
         }
-        input {
-            @include email;
-            padding: 19px 19px 19px 35px;
-            margin: 29px 0 12px 0;
-            &:focus {
-                outline: 0;
+        &-btn {
+            input {
+                @include email;
+                padding: 19px 19px 19px 35px;
+                margin: 29px 0 12px 0;
+                width: 100%;
+                &:focus {
+                    outline: 0;
+                }
+                &::placeholder {
+                    font-size: 14px;
+                    line-height: 16px;
+                }
             }
-            &::placeholder {
-                font-size: 14px;
-                line-height: 16px;
+            button {
+                @include btn;
+                padding: 17px 144px;
+                margin-bottom: 130px;
+                width: 100%;
             }
-        }
-        button {
-            @include btn;
-            padding: 17px 144px;
-            margin-bottom: 130px;
         }
     }
 }

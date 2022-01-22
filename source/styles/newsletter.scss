@@ -1,47 +1,105 @@
 .newsletter {
     .container {
-        @include flex-row;
+        @include flex-column;
+        justify-content: space-between;
         margin: 216px auto 109px;
         @media(max-width: $xl) {
             margin: 20px auto 90px;
+        }
+        @media(max-width: $md) {
+            @include flex-column;
         }
     }
     &-block {
         @include flex-row;
         justify-content: space-between;
-        @media(max-width: $md) {
+        align-items: center;
+        @media(max-width: 770px) {
             @include flex-column;
+            justify-content: center !important;
+            align-items: center !important;
+            text-align: center !important;
         }
-        &-pic {
+        &__info {
+            @include flex-column;
+            justify-content: space-between;
+        }
+        &__pic {
             // background: url(../img/news.svg) no-repeat;
             // ;
             // height: 100%;
             // width: 100%;
             img {
-                max-width: 100%;
-                height: 100%;
+                width: 100%;
             }
         }
         &__descr {
             @include titleStyle;
             @include flex-column;
-            align-items: start !important;
+            align-items: start;
+            @media(min-width: $md) {
+                .title {
+                    display: none;
+                }
+            }
             h2 {
                 text-align: left;
             }
+            @media(min-width: $md) {
+                .paragraph {
+                    display: none;
+                    width: 40%;
+                }
+            }
+            @media(max-width: $md) {
+                @include flex-column;
+                @include titleStyle;
+                justify-content: center !important;
+                align-items: center;
+                h2 {
+                    text-align: center;
+                }
+                .paragraph {
+                    width: 60%;
+                }
+                .text {
+                    display: none;
+                }
+            }
             &__btn {
                 @include flex-row;
+                justify-content: start;
                 align-items: center;
+                margin-top: 34px;
+                @media(max-width: $md) {
+                    @include flex-column;
+                    justify-content: center;
+                    align-items: center;
+                    input {
+                        margin-bottom: 12px;
+                        width: 100%;
+                        margin-right: 0;
+                    }
+                    input:focus {
+                        outline: 0;
+                    }
+                    button {
+                        width: 100%;
+                    }
+                }
                 input {
                     @include email;
-                    margin-top: 34px;
-                    width: 273px;
+                    margin-right: 12px;
+                    width: 100%;
+                    @media(max-width: $md) {
+                        margin-right: 0;
+                    }
                 }
                 input:focus {
                     outline: 0;
                 }
                 button {
-                    margin: 34px 0 0 12px;
+                    margin: 0;
                     color: $btn;
                     border: none;
                     padding: 19px 38px;

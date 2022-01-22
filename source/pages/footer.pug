@@ -1,32 +1,9 @@
 footer.more
     .container
-        .more__pages 
-            ul
-                li 
-                    span Pages
-                li Home
-                li Product
-                li Pricing
-                li About
-                li Contact
-        .more__pages 
-            ul
-                li 
-                    span Tomothy 
-                li Eleanor Edwards
-                li Ted Robertson
-                li Annette Russell
-                li Jennie Mckinney
-                li Gloria Richards
-        .more__pages 
-            ul
-                li 
-                    span Jane Black
-                li Philip Jones
-                li Product
-                li Colleen Russell
-                li Marvin Hawkins
-                li Bruce Simmmons
+        .footext
+            include ./more-pages.pug
+        .pages
+            include ./footext.pug
         .more__subscribe
             .more__subscribe-img
                 img(src="../img/more1.png", alt="icons")
@@ -34,5 +11,6 @@ footer.more
                 img(src="../img/more3.png", alt="icons")
             span Subscribe to our Newsletter
             p Available exclusivery on Figmaland
-            input(type="email" placeholder="Your Email")
-            button Subsribe
+            .more__subscribe-btn
+                input(type="email" placeholder="Your Email")
+                button Subsribe

@@ -5,9 +5,14 @@
     align-items: center;
     &-title {
         @include titleStyle;
+        justify-content: center;
+        align-items: center;
         margin-top: 96px;
         p {
             width: 21vw;
+            @media(max-width: $md) {
+                width: 70vw;
+            }
         }
     }
     &-info {
@@ -16,6 +21,7 @@
             @include flex-column;
         }
         &__img {
+            justify-content: center;
             align-items: center;
             img {
                 max-width: 100%;

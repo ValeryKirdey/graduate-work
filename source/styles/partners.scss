@@ -6,13 +6,28 @@
         align-items: center;
         p {
             width: 22%;
+            @media(max-width: 1000px) {
+                width: 47%;
+            }
+            @media(max-width: $md) {
+                width: 60%;
+            }
         }
     }
     &__icons {
         @include flex-row;
         margin: 100px 0px;
         img {
-            padding-left: 67px;
+            padding: 30px;
+        }
+        @media(max-width: $md) {
+            @include flex-column;
+            align-items: center;
+        }
+        img:last-child {
+            @media(max-width: 960px) {
+                display: none;
+            }
         }
     }
     button {
