@@ -31,6 +31,7 @@
             color: $white;
             text-decoration: none;
             list-style-type: none;
+            margin-top: 80px;
             li {
                 margin: 8px 0;
             }
@@ -87,7 +88,7 @@
             img {
                 margin: 0 32px 32px 0;
                 @media(max-width: $md) {
-                    margin: 32px;
+                    margin: 80px 32px 32px;
                 }
             }
         }
