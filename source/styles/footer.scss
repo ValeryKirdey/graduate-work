@@ -4,10 +4,10 @@
         @include flex-row;
         justify-content: space-between;
         width: 80%;
-        @media(max-width: 780px) {
-            @include flex-column;
-        }
-        @media(max-width: $md) {
+        // @media(max-width: 780px) {
+        //     @include flex-column;
+        // }
+        @media(max-width: $xl) {
             @include flex-column;
             justify-content: center;
             align-items: center;
@@ -75,7 +75,7 @@
             justify-content: center;
             align-items: center;
         }
-        @media(max-width: $md) {
+        @media(max-width: $xl) {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -120,7 +120,13 @@
                 @include btn;
                 padding: 17px 144px;
                 margin-bottom: 130px;
+                border: 2px solid $btn;
                 width: 100%;
+            }
+            button:hover {
+                background: transparent !important;
+                color: $white !important;
+                border: 2px solid $white;
             }
         }
     }

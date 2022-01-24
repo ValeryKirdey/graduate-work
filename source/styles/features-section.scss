@@ -19,24 +19,27 @@
         @include flex-row;
         @media(max-width: $md) {
             @include flex-column;
-        }
-        &__img {
             justify-content: center;
             align-items: center;
+        }
+        &__img {
             img {
                 max-width: 100%;
-                height: 100%;
             }
         }
         &__descr {
             @include flex-column;
-            justify-content: center;
+            justify-content: flex-start;
             color: $white;
+            @media(max-width: $xl) {
+                @include flex-column;
+                justify-content: center;
+                margin-bottom: 100px;
+            }
             @media(max-width: $md) {
                 @include flex-column;
                 justify-content: center;
                 align-items: center;
-                margin-bottom: 100px;
             }
             p {
                 width: 60%;

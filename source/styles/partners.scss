@@ -34,5 +34,11 @@
         @include btn;
         padding: 16px 58px;
         margin-bottom: 80px;
+        border: 2px solid $btn;
+    }
+    button:hover {
+        background: transparent !important;
+        color: $white !important;
+        border: 2px solid $white;
     }
 }

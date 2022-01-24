@@ -1,13 +1,26 @@
 .navbar {
-    position: absolute;
-    width: 100%;
-    margin: 0 auto;
+    padding: 0 !important;
+    @include flex-row;
+    justify-content: center;
     .container {
+        position: absolute;
         @include flex-row;
-        justify-content: center;
-        align-items: center;
-        margin-top: 50px;
+        justify-content: space-between;
+        max-width: 85%;
         flex-wrap: nowrap !important;
+        margin-top: 150px;
+        @media(max-width: 1250px) {
+            max-width: 90%;
+        }
+        @media(max-width: 1175px) {
+            max-width: 100%;
+        }
+        @media(max-width: $md) {
+            justify-content: space-between;
+        }
+        @media(max-width: $sm) {
+            justify-content: center;
+        }
     }
     &-menu {
         .nav-link {
@@ -18,10 +31,10 @@
             letter-spacing: 0.2px;
             color: $white;
             @media(max-width: $xxl) {
-                margin: 0;
+                margin: 0 auto;
             }
         }
-        @media(max-width: $md) {
+        @media(max-width: 990px) {
             display: none;
         }
     }
@@ -41,9 +54,11 @@
                 font-size: 14px;
                 line-height: 16px;
             }
+            @media(max-width: 1153px) {
+                width: 20vw;
+            }
             @media(max-width: $xl) {
                 margin: 0;
-                width: 25vw;
             }
             @media(max-width: $md) {
                 display: none;
@@ -53,29 +68,40 @@
             margin: 0px 10px;
             background: $white !important;
             color: $btn !important;
-            border: none;
+            border: 2px solid $white;
             padding: 19px 38px;
             @include btn;
             @media(max-width: $md) {
                 display: none;
             }
-            // @media(min-width: $md) {
-            //     display: none;
-            // }
+        }
+        .sub:hover {
+            background: transparent !important;
+            color: $white !important;
+            border: 2px solid $white;
         }
         .log {
-            margin: 30px 20px 0 3px;
+            margin: 0 20px;
             background: $white !important;
             color: $btn !important;
-            border: none;
+            border: 2px solid $white;
             padding: 19px 38px;
             @include btn;
-            @media(min-width: $md) {
+            @media(min-width: 771px) {
                 display: none;
             }
+            @media(max-width: $sl) {
+                margin: 0 auto;
+            }
         }
-        @media(min-width: $md) {
+        .log:hover {
+            background: transparent !important;
+            color: $white !important;
+            border: 2px solid $white;
+        }
+        @media(min-width: 991px) {
             img {
+                width: 100%;
                 display: none;
             }
         }

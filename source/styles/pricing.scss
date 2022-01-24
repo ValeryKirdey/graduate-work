@@ -2,7 +2,6 @@
     .container {
         @include flex-row;
         justify-content: space-around;
-        width: 75%;
         @media(max-width: $md) {
             @include flex-column;
             justify-content: center;
@@ -54,6 +53,12 @@
             @include btn;
             padding: 18px 38px;
             margin: 19px 0 100px;
+            border: 2px solid $btn;
+        }
+        button:hover {
+            background: transparent !important;
+            color: $white !important;
+            border: 2px solid $white;
         }
     }
 }

@@ -85,7 +85,6 @@
             }
         }
         textarea {
-            background: #F5F5F5; //placeholder hidden
             border: 1px solid #E8E8E8;
             color: $black;
             box-sizing: border-box;
@@ -107,6 +106,12 @@
             height: 52px;
             padding: 18px 54px;
             align-items: center;
+            border: 2px solid $white;
+        }
+        button:hover {
+            background: $bg !important;
+            color: $white !important;
+            border: 2px solid $white;
         }
     }
 }
